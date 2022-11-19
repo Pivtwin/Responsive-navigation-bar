@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.navbar {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+#check {
+  display: none;
+}
+.checkbtn {
+  display: none;
+}
+.logo {
+  color: #000;
+  font-weight: 900;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.logo span {
+  font-size: 20px;
+  font-weight: normal;
+}
+.navbar ul {
+  display: flex;
+  height: 100%;
+}
+.navbar ul li {
+  list-style: none;
+  height: 100%;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+  font-size: 16px;
+  transition: 0.2s ease-in-out;
+  border-bottom: 5px solid transparent;
+}
+.navbar ul li a:hover {
+  border-color: #000;
+  padding-bottom: 5px;
+}
+@media (max-width: 620px) {
+  .navbar ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #efefef;
+    left: -100%;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s;
+  }
+  .navbar ul li {
+    height: 50px;
+  }
+  .navbar ul li a {
+    height: 50px;
+    justify-content: center;
+    color: #000;
+    border: none;
+  }
+  .navbar ul li a:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  .checkbtn {
+    display: block;
+    color: #000;
+    cursor: pointer;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+@media (max-width: 200px) {
+  .logo {
+    display: none;
+  }
+}
